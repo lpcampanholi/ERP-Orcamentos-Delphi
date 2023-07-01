@@ -1,0 +1,154 @@
+object ClienteSelecionarF: TClienteSelecionarF
+  Left = 1018
+  Height = 369
+  Top = 215
+  Width = 618
+  Caption = 'Selecionar Cliente'
+  ClientHeight = 369
+  ClientWidth = 618
+  DesignTimePPI = 120
+  OnClose = FormClose
+  OnShow = FormShow
+  LCLVersion = '2.2.6.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 72
+    Top = 0
+    Width = 618
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 72
+    ClientWidth = 618
+    TabOrder = 0
+    object edtPesq: TEdit
+      Left = 30
+      Height = 28
+      Top = 30
+      Width = 160
+      TabOrder = 0
+    end
+    object Label1: TLabel
+      Left = 30
+      Height = 20
+      Top = 10
+      Width = 41
+      Caption = 'Nome'
+      ParentColor = False
+    end
+    object btnPesquisa: TBitBtn
+      Left = 200
+      Height = 38
+      Top = 21
+      Width = 110
+      Caption = 'Pesquisar'
+      Glyph.Data = {
+        4E010000424D4E01000000000000760000002800000012000000120000000100
+        040000000000D800000000000000000000001000000010000000000000000000
+        BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00DDDDDDDDDDDD
+        DDDDDD000000DDDDDDDDDDDDDDDDDD000000D000000000000DD00D000000D0FF
+        FFFFFFFF0D000D000000D0FFFFFFF0000800DD000000D0FFFFFF0877808DDD00
+        0000D0FFFFF0877E880DDD000000D0FFFFF07777870DDD000000D0FFFFF07E77
+        870DDD000000D0FFFFF08EE7880DDD000000D0FFFFFF087780DDDD000000D0FF
+        FFFFF0000DDDDD000000D0FFFFFFFFFF0DDDDD000000D0FFFFFFF0000DDDDD00
+        0000D0FFFFFFF070DDDDDD000000D0FFFFFFF00DDDDDDD000000DD00000000DD
+        DDDDDD000000DDDDDDDDDDDDDDDDDD000000
+      }
+      OnClick = btnPesquisaClick
+      ParentBidiMode = False
+      TabOrder = 1
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 62
+    Top = 307
+    Width = 618
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 62
+    ClientWidth = 618
+    TabOrder = 1
+    object Panel3: TPanel
+      Left = 406
+      Height = 62
+      Top = 0
+      Width = 212
+      Align = alRight
+      BevelOuter = bvNone
+      ClientHeight = 62
+      ClientWidth = 212
+      TabOrder = 0
+      object btnFechar: TBitBtn
+        Left = 80
+        Height = 38
+        Top = 8
+        Width = 94
+        Caption = 'Fechar'
+        Glyph.Data = {
+          42010000424D4201000000000000760000002800000011000000110000000100
+          040000000000CC00000000000000000000001000000010000000000000000000
+          BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777777777777
+          777770000000777777777777777770000000777777777777770F700000007777
+          0F777777777770000000777000F7777770F770000000777000F777770F777000
+          00007777000F77700F777000000077777000F700F7777000000077777700000F
+          7777700000007777777000F777777000000077777700000F7777700000007777
+          7000F70F7777700000007770000F77700F7770000000770000F7777700F77000
+          00007700F7777777700F70000000777777777777777770000000777777777777
+          777770000000
+        }
+        OnClick = btnFecharClick
+        TabOrder = 0
+      end
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 235
+    Top = 72
+    Width = 618
+    Align = alClient
+    BorderStyle = bsNone
+    Color = clWindow
+    Columns = <    
+      item
+        MinSize = 10
+        MaxSize = 200
+        Title.Caption = 'ID'
+        Width = 50
+        FieldName = 'clienteid'
+      end    
+      item
+        MinSize = 10
+        MaxSize = 200
+        Title.Caption = 'Nome'
+        Width = 200
+        FieldName = 'nome_cliente'
+      end    
+      item
+        MinSize = 10
+        MaxSize = 200
+        Title.Caption = 'Tipo'
+        Width = 50
+        FieldName = 'tipo_cliente'
+      end    
+      item
+        MinSize = 10
+        MaxSize = 200
+        Title.Caption = 'CPF / CNPJ'
+        Width = 150
+        FieldName = 'cpf_cnpj_cliente'
+      end>
+    DataSource = dsCliente
+    ReadOnly = True
+    Scrollbars = ssVertical
+    TabOrder = 2
+    OnDblClick = DBGrid1DblClick
+  end
+  object dsCliente: TDataSource
+    DataSet = DataModuleF.qryCliente
+    Left = 496
+    Top = 128
+  end
+end

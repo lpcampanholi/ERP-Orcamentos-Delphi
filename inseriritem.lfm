@@ -1,0 +1,180 @@
+object InserirItemF: TInserirItemF
+  Left = 854
+  Height = 274
+  Top = 245
+  Width = 297
+  Caption = 'Inserir Item'
+  ClientHeight = 274
+  ClientWidth = 297
+  OnClose = FormClose
+  LCLVersion = '2.2.6.0'
+  object Label7: TLabel
+    Left = 19
+    Height = 15
+    Top = 109
+    Width = 29
+    Caption = 'Qtde.'
+    ParentColor = False
+  end
+  object dbedtQtde: TDBEdit
+    Left = 19
+    Height = 23
+    Top = 122
+    Width = 70
+    DataField = 'qt_produto'
+    DataSource = OrcamentoF.dsOrcamentoItem
+    Alignment = taRightJustify
+    Font.CharSet = ANSI_CHARSET
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 2
+  end
+  object dbedtVlrUnit: TDBEdit
+    Left = 102
+    Height = 23
+    Top = 122
+    Width = 70
+    DataField = 'vl_unitario'
+    DataSource = OrcamentoF.dsOrcamentoItem
+    MaxLength = 0
+    TabOrder = 3
+  end
+  object Label4: TLabel
+    Left = 102
+    Height = 15
+    Top = 109
+    Width = 45
+    Caption = 'Vlr. Unit.'
+    ParentColor = False
+  end
+  object dbedtDsProduto: TDBEdit
+    Left = 19
+    Height = 23
+    Top = 70
+    Width = 243
+    DataField = 'produtodesc'
+    DataSource = OrcamentoF.dsOrcamentoItem
+    MaxLength = 0
+    TabOrder = 1
+  end
+  object Label3: TLabel
+    Left = 19
+    Height = 15
+    Top = 58
+    Width = 114
+    Caption = 'Descrição do Produto'
+    ParentColor = False
+  end
+  object dbedtIDProduto: TDBEdit
+    Left = 19
+    Height = 23
+    Top = 26
+    Width = 70
+    DataField = 'produtoid'
+    DataSource = OrcamentoF.dsOrcamentoItem
+    Alignment = taRightJustify
+    MaxLength = 0
+    TabOrder = 0
+  end
+  object Label8: TLabel
+    Left = 19
+    Height = 15
+    Top = 13
+    Width = 43
+    Caption = 'Produto'
+    ParentColor = False
+  end
+  object spbtnCategoria: TSpeedButton
+    Left = 102
+    Height = 22
+    Top = 26
+    Width = 23
+    Caption = '...'
+    OnClick = spbtnCategoriaClick
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 50
+    Top = 224
+    Width = 297
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 50
+    ClientWidth = 297
+    TabOrder = 5
+    object Panel2: TPanel
+      Left = 103
+      Height = 50
+      Top = 0
+      Width = 194
+      Align = alRight
+      BevelOuter = bvNone
+      ClientHeight = 50
+      ClientWidth = 194
+      TabOrder = 0
+      object btnCancelar: TBitBtn
+        Left = 90
+        Height = 30
+        Top = 6
+        Width = 75
+        Caption = 'Cancelar'
+        Glyph.Data = {
+          F6000000424DF600000000000000760000002800000010000000100000000100
+          0400000000008000000000000000000000001000000010000000000000000000
+          BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777777777777
+          7777777777777777777777777777777777777777777777777777777777777777
+          7777777777777778477777444447777748777744447777777477774447777777
+          7477774474777777747777477744777748777777777744448777777777777777
+          7777777777777777777777777777777777777777777777777777
+        }
+        OnClick = btnCancelarClick
+        TabOrder = 1
+      end
+      object btnInserir: TBitBtn
+        Left = 6
+        Height = 30
+        Top = 6
+        Width = 75
+        Caption = 'Inserir'
+        Color = clRed
+        Glyph.Data = {
+          DE000000424DDE0000000000000076000000280000000D0000000D0000000100
+          0400000000006800000000000000000000001000000010000000000000000000
+          BF0000BF000000BFBF00BF000000BF00BF00BFBF0000C0C0C000808080000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00777777777777
+          700077777777777770007777700077777000777770C077777000777770C07777
+          7000770000C000077000770CCCCCCC077000770000C000077000777770C07777
+          7000777770C07777700077777000777770007777777777777000777777777777
+          7000
+        }
+        OnClick = btnInserirClick
+        ParentBidiMode = False
+        ParentFont = False
+        ParentShowHint = False
+        TabOrder = 0
+      end
+    end
+  end
+  object Label5: TLabel
+    Left = 192
+    Height = 15
+    Top = 109
+    Width = 45
+    Caption = 'Vlr. Total'
+    ParentColor = False
+  end
+  object dbedtVlrTotal: TDBEdit
+    Left = 192
+    Height = 23
+    Top = 122
+    Width = 70
+    DataField = 'vl_total'
+    DataSource = OrcamentoF.dsOrcamentoItem
+    ReadOnly = True
+    MaxLength = 0
+    TabOrder = 4
+  end
+end

@@ -1,0 +1,67 @@
+object MenuF: TMenuF
+  Left = 690
+  Height = 347
+  Top = 159
+  Width = 446
+  Caption = 'MenuF'
+  DesignTimePPI = 120
+  Menu = MainMenu1
+  LCLVersion = '2.2.6.0'
+  WindowState = wsMaximized
+  object MainMenu1: TMainMenu
+    Left = 312
+    Top = 40
+    object MenuItem1: TMenuItem
+      Caption = 'Cadastros'
+      object MenuItem6: TMenuItem
+        Caption = 'Categorias'
+        OnClick = MenuItem6Click
+      end
+      object MenuItem7: TMenuItem
+        Caption = 'Clientes'
+        OnClick = MenuItem7Click
+      end
+      object MenuItem8: TMenuItem
+        Caption = 'Produtos'
+        OnClick = MenuItem8Click
+      end
+      object Separator1: TMenuItem
+        Caption = '-'
+      end
+      object MenuItem9: TMenuItem
+        Caption = 'Usuários'
+        OnClick = MenuItem9Click
+      end
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'Vendas'
+      object MenuItem10: TMenuItem
+        Caption = 'Orçamentos'
+        OnClick = MenuItem10Click
+      end
+    end
+    object MenuItem3: TMenuItem
+      Caption = 'Relatórios'
+      object MenuItem11: TMenuItem
+        Caption = 'Clientes'
+        OnClick = MenuItem11Click
+      end
+      object MenuItem12: TMenuItem
+        Caption = 'Produtos'
+        OnClick = MenuItem12Click
+      end
+      object MenuItem13: TMenuItem
+        Caption = 'Orçamentos'
+        OnClick = MenuItem13Click
+      end
+    end
+    object MenuItem4: TMenuItem
+      Caption = 'Sobre'
+      OnClick = MenuItem4Click
+    end
+    object MenuItem5: TMenuItem
+      Caption = 'Sair'
+      OnClick = MenuItem5Click
+    end
+  end
+end

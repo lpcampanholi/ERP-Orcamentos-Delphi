@@ -1,0 +1,170 @@
+inherited UsuarioF: TUsuarioF
+  Left = 804
+  Top = 176
+  Caption = 'Usuários'
+  OnClose = FormClose
+  OnShow = FormShow
+  inherited PageControl1: TPageControl
+    ActivePage = TabSheet2
+    TabIndex = 1
+    OnChange = PageControl1Change
+    inherited TabSheet1: TTabSheet
+      inherited Panel1: TPanel
+        inherited btnNovo: TBitBtn
+          OnClick = btnNovoClick
+        end
+        inherited Panel2: TPanel
+          inherited btnFechar: TBitBtn
+            OnClick = btnFecharClick
+          end
+        end
+      end
+      inherited Panel5: TPanel
+        inherited btnPesquisa: TBitBtn
+          Left = 216
+          Top = 10
+          Visible = False
+        end
+        inherited edtPesq: TEdit
+          Visible = False
+        end
+        inherited Label1: TLabel
+          Visible = False
+        end
+      end
+      inherited DBGrid1: TDBGrid
+        Columns = <        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'ID Usuário'
+            FieldName = 'id'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Usuário'
+            Width = 100
+            FieldName = 'usuario'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Nome Completo'
+            Width = 250
+            FieldName = 'nome_completo'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Senha'
+            Width = 200
+            FieldName = 'senha'
+          end>
+        DataSource = dsUsuario
+        ReadOnly = True
+        Scrollbars = ssVertical
+        OnDblClick = DBGrid1DblClick
+      end
+    end
+    inherited TabSheet2: TTabSheet
+      inherited Panel3: TPanel
+        TabOrder = 4
+        inherited btnEditar: TBitBtn
+          OnClick = btnEditarClick
+        end
+        inherited Panel4: TPanel
+          TabOrder = 3
+          inherited btnCancelar: TBitBtn
+            OnClick = btnCancelarClick
+          end
+        end
+        inherited btnSalvar: TBitBtn
+          OnClick = btnSalvarClick
+          TabOrder = 1
+        end
+        inherited btnExcluir: TBitBtn
+          OnClick = btnExcluirClick
+          TabOrder = 2
+        end
+      end
+      object dbedtID: TDBEdit[1]
+        Left = 30
+        Height = 23
+        Top = 48
+        Width = 88
+        DataField = 'id'
+        DataSource = dsUsuario
+        ReadOnly = True
+        Alignment = taRightJustify
+        MaxLength = 0
+        TabOrder = 0
+      end
+      object Label2: TLabel[2]
+        Left = 30
+        Height = 15
+        Top = 32
+        Width = 11
+        Caption = 'ID'
+        ParentColor = False
+      end
+      object dbedtUsuario: TDBEdit[3]
+        Left = 30
+        Height = 23
+        Top = 104
+        Width = 152
+        DataField = 'usuario'
+        DataSource = dsUsuario
+        Alignment = taRightJustify
+        CharCase = ecUppercase
+        MaxLength = 0
+        TabOrder = 1
+      end
+      object Label8: TLabel[4]
+        Left = 30
+        Height = 15
+        Top = 88
+        Width = 40
+        Caption = 'Usuário'
+        ParentColor = False
+      end
+      object dbedtNomeCompleto: TDBEdit[5]
+        Left = 30
+        Height = 23
+        Top = 160
+        Width = 264
+        DataField = 'nome_completo'
+        DataSource = dsUsuario
+        MaxLength = 0
+        TabOrder = 2
+      end
+      object Label3: TLabel[6]
+        Left = 30
+        Height = 15
+        Top = 144
+        Width = 89
+        Caption = 'Nome Completo'
+        ParentColor = False
+      end
+      object dbedtSenha: TDBEdit[7]
+        Left = 30
+        Height = 23
+        Top = 216
+        Width = 264
+        DataField = 'senha'
+        DataSource = dsUsuario
+        MaxLength = 0
+        TabOrder = 3
+      end
+      object Label4: TLabel[8]
+        Left = 30
+        Height = 15
+        Top = 200
+        Width = 32
+        Caption = 'Senha'
+        ParentColor = False
+      end
+    end
+  end
+  object dsUsuario: TDataSource[1]
+    DataSet = DataModuleF.qryUsuario
+    Left = 584
+    Top = 176
+  end
+end
